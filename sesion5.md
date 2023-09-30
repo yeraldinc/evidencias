@@ -56,10 +56,11 @@ Implementar un constructor en la clase Motocicleta que acepte todos los atributo
 >
 >
 <!-- Su documentación aquí -->
- <p>class Vehiculo {
-    protected String marca;
-    protected String modelo;
-    private int año;
+    <p>
+            class Vehiculo {
+            protected String marca;
+            protected String modelo;
+            private int año;
 
     public Vehiculo(String marca, String modelo, int año) {
         this.marca = marca;
@@ -74,7 +75,7 @@ Implementar un constructor en la clase Motocicleta que acepte todos los atributo
     }
 }
 
-class Automovil extends Vehiculo {
+    class Automovil extends Vehiculo {
     private int numPuertas;
     private String tipoTransmision;
 
@@ -93,7 +94,7 @@ class Automovil extends Vehiculo {
     }
 }
 
-class Motocicleta extends Vehiculo {
+    class Motocicleta extends Vehiculo {
     private String tipo;
     private int cilindraje;
 
@@ -113,7 +114,7 @@ class Motocicleta extends Vehiculo {
 
 }
 
-public class Main {
+    public class Main {
     public static void main(String[] args) {
         Automovil automovil = new Automovil("Toyota", "Camry", 2022, 4, "Automática");
         
