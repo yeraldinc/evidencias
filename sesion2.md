@@ -10,7 +10,7 @@
 
 
 * Cuestionario de Lógica de Programación en Java - Nivel Básico:
-¿Cuál de las siguientes opciones es un tipo de dato primitivo en Java? <br>  
+¿Cuál de las siguientes opciones es un tipo de dato primitivo en Java?<br>  
 c. boolean 
 
 * ¿Qué estructura de control se utiliza para repetir un bloque de código mientras se cumple una condición? <br>
@@ -72,8 +72,7 @@ c. int[] numbers = new int[5];
 a. break 
 
 * ¿Cuál es el resultado de la expresión: "Hello" + "World"? <br>
-
-d. HelloWorld 
+    d. HelloWorld 
 
 
 
