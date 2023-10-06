@@ -11,9 +11,10 @@
 
 >Crea una clase llamada Producto que representará productos en una tienda en línea. La clase debe tener los siguientes atributos privados:
 
--nombre (String): El nombre del producto.
--precio (double): El precio del producto.
--cantidad (int): La cantidad de unidades disponibles del producto.
+- nombre (String): El nombre del producto.<br>
+- precio (double): El precio del producto.<br>
+- cantidad (int): La cantidad de unidades disponibles del producto.<br>
+>
 >La clase Producto debe tener los siguientes constructores sobrecargados:
 >
 - Un constructor por defecto que inicialice el nombre como "Desconocido", el precio como 0.0 y la cantidad como 0.
@@ -38,9 +39,8 @@
 - actualizarPrecio(double nuevoPrecio, String moneda, double tasaCambio): Un método sobrecargado que permita actualizar el precio del producto en dólares con un nuevo valor proporcionado como argumento, teniendo en cuenta la moneda especificada y la tasa de cambio proporcionada.
 >
 >En el método main, crea tres instancias de la clase Producto utilizando los diferentes constructores, muestra la información de los productos y realiza algunas operaciones para probar los métodos sobrecargados, incluyendo la actualización de precios en euros y pesos colombianos con tasas de conversión específicas.
-
-
-
+>
+>
 ~~~ 
         public class Producto {
             private String nombre;
