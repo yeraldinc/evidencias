@@ -42,100 +42,97 @@
 >
 >
 ~~~ 
-        public class Producto {
-            private String nombre;
-            private double precio;
-            private int cantidad;
 
-            // Constructor por defecto
-            public Producto() {
-                this.nombre = "Desconocido";
-                this.precio = 0.0;
-                this.cantidad = 0;
-            }
+                public class Producto {
+                    private String nombre;
+                    private double precio;
+                    private int cantidad;
+                
+                public Producto() {
+                    this.nombre = "Desconocido";
+                    this.precio = 0.0;
+                    this.cantidad = 0;
+                }
 
-            // Constructor con nombre y precio
-            public Producto(String nombre, double precio) {
-                this.nombre = nombre;
-                this.precio = precio;
-                this.cantidad = 0;
-            }
+                // Constructor con nombre y precio
+                public Producto(String nombre, double precio) {
+                    this.nombre = nombre;
+                    this.precio = precio;
+                    this.cantidad = 0;
+                }
 
-            // Constructor con nombre, precio y cantidad
-            public Producto(String nombre, double precio, int cantidad) {
-                this.nombre = nombre;
-                this.precio = precio;
-                this.cantidad = cantidad;
-            }
+                public Producto(String nombre, double precio, int cantidad) {
+                    this.nombre = nombre;
+                    this.precio = precio;
+                    this.cantidad = cantidad;
+                }
 
-            // Método para calcular el valor total
-            public double calcularValorTotal() {
-                return precio * cantidad;
-            }
+                public double calcularValorTotal() {
+                    return precio * cantidad;
+                }
 
-            // Método para mostrar información del producto
-            public void mostrarInformacion() {
-                System.out.println("Nombre: " + nombre);
-                System.out.println("Precio: $" + precio);
-                System.out.println("Cantidad: " + cantidad);
-                System.out.println("Valor Total: $" + calcularValorTotal());
-            }
+                public void mostrarInformacion() {
+                    System.out.println("Nombre: " + nombre);
+                    System.out.println("Precio: $" + precio);
+                    System.out.println("Cantidad: " + cantidad);
+                    System.out.println("Valor Total: $" + calcularValorTotal());
+                }
 
-            // Método sobrecargado para incrementar la cantidad en 1 unidad
-            public void incrementarCantidad() {
-                cantidad++;
-            }
+                // Método sobrecargado
+                public void incrementarCantidad() {
+                    cantidad++;
+                }
 
-            // Método sobrecargado para incrementar la cantidad en una cantidad específica
-            public void incrementarCantidad(int cantidadIncrementar) {
-                cantidad += cantidadIncrementar;
-            }
+                // Método sobrecargado
+                public void incrementarCantidad(int cantidadIncrementar) {
+                    cantidad += cantidadIncrementar;
+                }
 
-            // Método sobrecargado para actualizar el precio en dólares
-            public void actualizarPrecio(double nuevoPrecio) {
-                precio = nuevoPrecio;
-            }
+                // Método sobrecargado para actualizar el precio en dólares
+                public void actualizarPrecio(double nuevoPrecio) {
+                    precio = nuevoPrecio;
+                }
 
-            // Método sobrecargado para actualizar el precio en una moneda específica con tasa de conversión fija
-            public void actualizarPrecio(double nuevoPrecio, String moneda) {
-                double tasaCambio = 1.0; // Tasa de conversión fija (ejemplo: 1 USD = 1 EUR)
-                if (moneda.equals("EUR")) {
-                    precio = nuevoPrecio * tasaCambio;
-                } else if (moneda.equals("COP")) {
-                    // Tasa de conversión fija para pesos colombianos
-                    precio = nuevoPrecio * 3500; // Ejemplo: 1 USD = 3500 COP
+                // Método sobrecargado para actualizar el precio en una moneda específica con tasa de conversión fija
+                public void actualizarPrecio(double nuevoPrecio, String moneda) {
+                    double tasaCambio = 1.0; // Tasa de conversión fija (ejemplo: 1 USD = 1 EUR)
+                    if (moneda.equals("EUR")) {
+                        precio = nuevoPrecio * tasaCambio;
+                    } else if (moneda.equals("COP")) {
+                        // Tasa de conversión fija para pesos colombianos
+                        precio = nuevoPrecio * 3500; // Ejemplo: 1 USD = 3500 COP
+                    }
+                }
+
+                // Método sobrecargado para actualizar el precio en una moneda específica con una tasa de cambio proporcionada
+                public void actualizarPrecio(double nuevoPrecio, String moneda, double tasaCambio) {
+                    if (moneda.equals("EUR") || moneda.equals("COP")) {
+                        precio = nuevoPrecio * tasaCambio;
+                    }
+                }
+
+                public static void main(String[] args) {
+                    // Crear instancias de Producto usando diferentes constructores
+                    Producto producto1 = new Producto();
+                    Producto producto2 = new Producto("Camiseta", 25.0);
+                    Producto producto3 = new Producto("Zapatos", 80.0, 2);
+
+                    // Mostrar información de los productos
+                    producto1.mostrarInformacion();
+                    producto2.mostrarInformacion();
+                    producto3.mostrarInformacion();
+
+                    // Realizar operaciones con los métodos sobrecargados
+                    producto1.incrementarCantidad(); // Incrementar cantidad en 1 unidad
+                    producto2.incrementarCantidad(3); // Incrementar cantidad en 3 unidades
+                    producto3.actualizarPrecio(90.0); // Actualizar precio en dólares
+                    producto2.actualizarPrecio(20.0, "EUR"); // Actualizar precio en euros
+                    producto3.actualizarPrecio(50000.0, "COP"); // Actualizar precio en pesos colombianos
+
+                    // Mostrar información actualizada
+                    producto1.mostrarInformacion();
+                    producto2.mostrarInformacion();
+                    producto3.mostrarInformacion();
                 }
             }
-
-            // Método sobrecargado para actualizar el precio en una moneda específica con una tasa de cambio proporcionada
-            public void actualizarPrecio(double nuevoPrecio, String moneda, double tasaCambio) {
-                if (moneda.equals("EUR") || moneda.equals("COP")) {
-                    precio = nuevoPrecio * tasaCambio;
-                }
-            }
-
-            public static void main(String[] args) {
-                // Crear instancias de Producto usando diferentes constructores
-                Producto producto1 = new Producto();
-                Producto producto2 = new Producto("Camiseta", 25.0);
-                Producto producto3 = new Producto("Zapatos", 80.0, 2);
-
-                // Mostrar información de los productos
-                producto1.mostrarInformacion();
-                producto2.mostrarInformacion();
-                producto3.mostrarInformacion();
-
-                // Realizar operaciones con los métodos sobrecargados
-                producto1.incrementarCantidad(); // Incrementar cantidad en 1 unidad
-                producto2.incrementarCantidad(3); // Incrementar cantidad en 3 unidades
-                producto3.actualizarPrecio(90.0); // Actualizar precio en dólares
-                producto2.actualizarPrecio(20.0, "EUR"); // Actualizar precio en euros
-                producto3.actualizarPrecio(50000.0, "COP"); // Actualizar precio en pesos colombianos
-
-                // Mostrar información actualizada
-                producto1.mostrarInformacion();
-                producto2.mostrarInformacion();
-                producto3.mostrarInformacion();
-            }
-        }
 ~~~ 
