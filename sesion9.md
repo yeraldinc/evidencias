@@ -17,7 +17,8 @@
 1. Completar la implementación de la aplicación de convertidor de unidades en Java, siguiendo las instrucciones de la sesión 9.
 >
 >
-##### Superclase Conversor
+## Superclase Conversor
+```
     public abstract class Conversor {
         protected String unidadOrigen;
         protected String unidadDestino;
@@ -29,8 +30,10 @@
         
         public abstract double convertir(double cantidad);
     }
+```
+## Subclase Temperatura
 
-##### Subclase Temperatura
+```
     public class Temperatura extends Conversor {
 
         public Temperatura(String unidadOrigen, String unidadDestino) {
@@ -64,10 +67,10 @@
             }
         }
     }
+```
+ ### Subclase Longitud
 
- #####  Subclase Longitud
-
-    
+  
 >
 >mplementar código:
 - Metros a Pies.
@@ -86,6 +89,7 @@
 - Metros a Decímetros.
 >
 >
+```
     public class Longitud extends Conversor {
 
             public Longitud(String unidadOrigen, String unidadDestino) {
@@ -144,10 +148,10 @@
                     }
 
     }       
->                
+```              
 >
 ##### Subclase Peso
->
+
 >Implementar código:<br>
 - Kilogramos a Libras.
 - Libras a Kilogramos.
@@ -170,7 +174,7 @@
 - Kilogramos a Miligramos.
 - Miligramos a Kilogramos.
 >
->
+```
     public class Peso extends Conversor {
 
         public Peso(String unidadOrigen, String unidadDestino) {
@@ -246,7 +250,7 @@
             throw new IllegalArgumentException("Pesos no compatibles");
         }
     }
-
+```
 >
 >
 #####  Subclase Divisas
@@ -258,7 +262,7 @@
 - Peso colombiano a Dólar estadounidense.
 - Euro a Peso colombiano.
 - Peso colombiano a Euro.
-
+```
         public class Divisas extends Conversor{
 
             public Divisas(String unidadOrigen, String unidadDestino) {
@@ -292,7 +296,7 @@
                     throw new IllegalArgumentException("Divisas no compatibles");
                 }
         }
->
+```
 >
 2. Agregar la subclase programador que contenga siguientes conversiones:
 >
