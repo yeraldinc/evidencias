@@ -9,7 +9,7 @@
 
 ## Actividad: Ejericio POO
 >
-### Conversor de Unidades
+## Conversor de Unidades
 >
 >El ejercicio consiste en crear una aplicación de convertidor de unidades en Java que implemente una superclase, subclases, herencias, constructores, métodos abstractos. La aplicación debe realizar conversiones de longitud, temperatura, divisas y peso.
 >
@@ -68,7 +68,7 @@
         }
     }
 ```
- ### Subclase Longitud
+ ## Subclase Longitud
 
   
 >
@@ -150,7 +150,7 @@
     }       
 ```              
 >
-##### Subclase Peso
+## Subclase Peso
 
 >Implementar código:<br>
 - Kilogramos a Libras.
@@ -253,7 +253,7 @@
 ```
 >
 >
-#####  Subclase Divisas
+##  Subclase Divisas
 >
 >Implementar código:
 - Dólar estadounidense a Euro.
