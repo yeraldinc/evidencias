@@ -93,8 +93,9 @@ Diapositivas explicativas que detallen las funciones y utilidades de las partes 
 >
 <!-- Su documentación aquí -->
 
-### https://drive.google.com/file/d/1Q3D36qaJFUgLeiTEmBAugyReiaoxIsxr/view?usp=sharing
 
+
+[diapositiva sesión 3](https://drive.google.com/file/d/1Q3D36qaJFUgLeiTEmBAugyReiaoxIsxr/view?usp=sharing)
 
 
 
