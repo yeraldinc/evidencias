@@ -41,9 +41,9 @@
 >
 >En el método main, crea tres instancias de la clase Producto utilizando los diferentes constructores, muestra la información de los productos y realiza algunas operaciones para probar los métodos sobrecargados, incluyendo la actualización de precios en euros y pesos colombianos con tasas de conversión específicas.
 
-~~~
-CLASE 7
 
+## CLASE 7
+```java
                 public class Producto {
                     
                 public String nombre;
@@ -120,9 +120,10 @@ CLASE 7
                         }
                     }
                 }
+```	
 
-                MAIN
-
+## MAIN
+```java
 
                 public class Actividad7 {
 
@@ -152,7 +153,7 @@ CLASE 7
                         
                     }
     
-   ~~~
+```
 
 
 

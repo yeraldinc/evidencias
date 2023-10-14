@@ -9,8 +9,6 @@
 #### Actividad: Clases y métodos abstractos de la superclase "Musica" en Java
 
 >
->
->
 >Se desea crear una jerarquía de clases que permita representar diferentes tipos de música. Se ha decidido crear una superclase Musica que tenga los métodos y atributos comunes a todas las clases hijas.
 >
 >La superclase Musica debe tener los siguientes métodos abstractos:
@@ -51,11 +49,11 @@
 >Cada clase hija debe implementar los métodos abstractos de la superclase Musica de manera adecuada para su tipo de música.
 
 
-## solución
+# solución
 
-#### super clase Musica
+## super clase Musica
 
-~~~
+```java
 
         public abstract class Musica {
             
@@ -75,11 +73,11 @@
             public abstract void   previous(); 
             
         }
-~~~
+```
 
- #### clase hija Cancion
+ ## clase hija Cancion
 
-~~~
+```java
         public class Cancion extends Musica {
             
             private String artista;
@@ -126,11 +124,11 @@
         
         
             }
- ~~~
+ ```
 
- #### BandaSonora
+ ## BandaSonora
 
- ~~~
+ ```java
         public class BandaSonora extends Musica {
             
             private String pelicula;
@@ -175,10 +173,10 @@
 
             
         }
-~~~
+```
 
-#### Album
-~~~
+## Album
+```java
         public class Album extends Musica{
             
             private String canciones;
@@ -221,11 +219,11 @@
             }
             
         }
-~~~
+```
 
-#### lista del album
+## lista del album
 
-~~~
+```java
     public class Album extends Musica {
         private List<Cancion> canciones;
 
@@ -268,7 +266,7 @@
             System.out.println("Retrocediendo al anterior en el álbum: " + getTitulo());
         }
     }
-~~~
+```
 
 
 

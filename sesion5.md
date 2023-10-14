@@ -9,7 +9,8 @@
 Actividad: Implementación de las Clases Automóvil y Motocicleta utilizando la herencia en java
 Implementar las clases derivadas (Automovil y Motocicleta) que hereden de la clase base (Vehiculo) en Java.
 
-// Clase base: Vehiculo
+ Clase base: Vehiculo
+```java
 class Vehiculo {
     protected String marca; // Cambiamos a protegido
     protected String modelo; // Cambiamos a protegido
@@ -27,8 +28,8 @@ class Vehiculo {
         System.out.println("Año: " + año);
     }
 }
-
-###### Implementación de la clase Automovil.
+```
+## Implementación de la clase Automovil.
 >Crear la clase Automovil como una clase derivada de Vehiculo y agregar los    siguientes atributos privados:  
 >
 >numPuertas (int): Número de puertas del automóvil.
@@ -56,7 +57,9 @@ Implementar un constructor en la clase Motocicleta que acepte todos los atributo
 >
 >
 <!-- Su documentación aquí -->
-    <p>
+
+````java
+
             class Vehiculo {
             protected String marca;
             protected String modelo;
@@ -124,7 +127,9 @@ Implementar un constructor en la clase Motocicleta que acepte todos los atributo
         
         motocicleta.mostrarInformacionMotocicleta();
     }
-} </p>
+} 
+```
+
 
 
 

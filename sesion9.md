@@ -33,7 +33,7 @@
 ```
 ## Subclase Temperatura
 
-```
+```java
     public class Temperatura extends Conversor {
 
         public Temperatura(String unidadOrigen, String unidadDestino) {
@@ -72,7 +72,7 @@
 
   
 >
->mplementar código:
+>complementar código:
 - Metros a Pies.
 - Pies a Metros.
 - Kilómetros a Millas.
@@ -89,7 +89,7 @@
 - Metros a Decímetros.
 >
 >
-```
+```java
     public class Longitud extends Conversor {
 
             public Longitud(String unidadOrigen, String unidadDestino) {
@@ -174,7 +174,7 @@
 - Kilogramos a Miligramos.
 - Miligramos a Kilogramos.
 >
-```
+```java
     public class Peso extends Conversor {
 
         public Peso(String unidadOrigen, String unidadDestino) {
@@ -262,7 +262,7 @@
 - Peso colombiano a Dólar estadounidense.
 - Euro a Peso colombiano.
 - Peso colombiano a Euro.
-```
+```java
         public class Divisas extends Conversor{
 
             public Divisas(String unidadOrigen, String unidadDestino) {
@@ -305,6 +305,101 @@
 - Binario a Decimal
 - Hexadecimal a Binario
 
+## subclase Programador
 
+```java	
+class Programador extends Conversor {
+
+    public Programador(String unidadOrigen, String unidadDestino) {
+        super(unidadOrigen, unidadDestino);
+    }
+
+    @Override
+    public double convertir(double cantidad) {
+               if (unidadOrigen.equals("Decimal") && unidadDestino.equals("Binario")) {
+            return decimalABinario(cantidad);
+        } else if (unidadOrigen.equals("Decimal") && unidadDestino.equals("Hexadecimal")) {
+            return decimalAHexadecimal(cantidad);
+        } else if (unidadOrigen.equals("Binario") && unidadDestino.equals("Decimal")) {
+            return binarioADecimal(cantidad);
+        } else if (unidadOrigen.equals("Hexadecimal") && unidadDestino.equals("Binario")) {
+            return hexadecimalABinario(cantidad);
+        } else {
+            System.out.println("Conversión no válida");
+            return 0.0;
+        }
+    }
+
+    private double decimalABinario(double decimal) {
+        // decimal a binario 
+        return Double.parseDouble(Integer.toBinaryString((int) decimal));
+    }
+
+    private double decimalAHexadecimal(double decimal) {
+        // decimal a hexadecimal
+        return Double.parseDouble(Integer.toHexString((int) decimal));
+    }
+
+    private double binarioADecimal(double binario) {
+        // binario a decimal 
+         return Double.parseDouble(Integer.toString((int) binario, 2));
+    }
+
+    private double hexadecimalABinario(double hexadecimal) {
+        // hexadecimal a binario
+        int decimal = Integer.parseInt(Double.toString(hexadecimal), 16);
+        return Double.parseDouble(Integer.toBinaryString(decimal));
+    }
+   
+}
+```	
+## ejemplo
+```java
+public class Actividad9 {
+
+    public static void main(String[] args) {
+     
+      Temperatura T1 = new Temperatura ("Celsius","Fahrenheit");
+      double resultado = T1.convertir(25);
+        System.out.println("la conversion de celsius a fahrenheit es: " +resultado);
+        
+      Temperatura T2 = new Temperatura ("Fahrenheit","Kelvin");
+      double res = T2.convertir(14);
+      System.out.println("la conversion de Fahrenheit a Kelvin es: " + res);  
+        
+      Longitud L1 = new Longitud ("Metros", "Pies");
+      double resultado1 = L1.convertir(36);
+      System.out.println("La conversion de metros a pies es: " +resultado1);
+      
+      Longitud L2 = new Longitud("Centimetros", "Pulgadas");
+      resultado = L2.convertir(40);
+      System.out.println("la conversion de centrimetros a pultadas es: " + resultado);
+      
+      Peso P1 = new Peso("Toneladas", "Kilogramos");
+      resultado = P1.convertir(25);
+      System.out.println("La conversion de toneladas a kilogramos es: " + resultado);
+      
+      Peso P2 = new Peso("Kilogramos","Toneladas");
+      resultado = P2.convertir(14);
+      System.out.println("La conversion de kilogramos a toneladas es: " + resultado);
+              
+      Programador p1 = new Programador("Decimal", "Binario");
+      double resultado2 = p1.convertir(15);
+      System.out.println("La conversion de decimal a binario es: " + resultado2);
+      
+      Programador p2 = new Programador("Decimal", "Hexadecimal");
+      double resultado3 = p2.convertir(20);
+      System.out.println("la conversion decimal a hexadecimal es: " + resultado3);
+      
+      Programador p3 = new Programador("Binario", "Decimal");
+      double resultado4 = p3.convertir(1010);
+      System.out.println("El resultado de binario a decimal es: " + resultado4);
+      
+      Programador p4 = new Programador("Hexadecimal", "Binario");
+      double resultado5 = p4.convertir(0);
+      System.out.println("la conversion hexadecimal a binario es: " + resultado5);
+    }
+}
+```	
 
 

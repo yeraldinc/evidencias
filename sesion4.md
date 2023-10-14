@@ -32,9 +32,10 @@ Agregue los atributos nombre, precio, cantidad, fabricante, marca y categoría a
 >
 >
 <!-- Su documentación aquí -->
-### https://drive.google.com/drive/folders/1R17TYwkVuEFEVkJd1omk_l0Mu6linVQd?usp=sharing
 
+## solución
 
+[link de clase de producto con modificadores de acceso y getters](https://drive.google.com/drive/folders/1R17TYwkVuEFEVkJd1omk_l0Mu6linVQd?usp=sharing)
 
 
 
